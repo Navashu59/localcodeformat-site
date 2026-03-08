@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Diff Checker — Compare Two Text Blocks Locally</title>
+  <meta name="description" content="Compare two text blocks locally in your browser with a fast diff checker for code, config, and content.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://localcodeformat.com/diff-checker/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body data-tool="diff-checker">
+  <header class="site-header"><div class="container site-header-inner"><a class="site-logo" href="/"><span class="site-logo-mark">{ }</span> Local Code Format</a><button class="menu-toggle" data-menu-toggle aria-label="Toggle menu">Menu</button><nav class="site-nav" data-menu><a href="/json-tools/">JSON Tools</a><a href="/formatters/">Formatters</a><a href="/validators/">Validators</a><a href="/guides/">Guides</a><a href="/about/">About</a></nav></div></header>
+  <section class="page-hero"><div class="container"><div class="breadcrumbs"><a href="/">Home</a><span>/</span><a href="/formatters/">Formatters</a><span>/</span><span>Diff Checker</span></div><h1>Diff Checker</h1><p>Compare two text blocks locally in your browser to spot what changed between versions of a query, config, snippet, or copy draft.</p><div class="byline">Updated March 7, 2026 · Local browser comparison</div></div></section>
+  <main class="section"><div class="container tool-layout">
+    <article class="card tool-shell">
+      <div class="field-group"><label for="diff-left">Original text</label><textarea id="diff-left" placeholder="Line one&#10;Line two&#10;Line three"></textarea></div>
+      <div class="field-group"><label for="diff-right">Updated text</label><textarea id="diff-right" placeholder="Line one&#10;Line two changed&#10;Line three"></textarea></div>
+      <div class="action-row"><button class="btn btn-primary" id="diff-compare">Compare text</button></div>
+    </article>
+    <aside class="card output-shell">
+      <h2>Diff output</h2>
+      <div class="output-meta"><span class="status-badge status-warn" id="diff-status">Waiting for input</span></div>
+      <div class="output-box"><pre id="diff-output"></pre></div>
+      <div class="result-toolbar"><button class="btn btn-secondary" data-copy-target="diff-output">Copy output</button></div>
+      <div class="explain-box"><pre id="diff-explain">Paste both versions above and compare them locally.</pre></div>
+    </aside>
+  </div></main>
+  <footer class="footer"><div class="container footer-grid"><div><h4>Local Code Format</h4><p>Browser-based code formatting and validation tools built around trust, clarity, and repeat-use developer workflows.</p></div><div><h4>Core Tools</h4><a href="/json-formatter/">JSON Formatter</a><a href="/json-validator/">JSON Validator</a><a href="/sql-formatter/">SQL Formatter</a><a href="/html-formatter/">HTML Formatter</a></div><div><h4>Learn</h4><a href="/guides/">Guides</a><a href="/guides/how-to-format-json-safely/">How to Format JSON Safely</a><a href="/guides/json-formatter-vs-validator/">JSON Formatter vs Validator</a></div><div><h4>Trust</h4><a href="/about/">About</a><a href="/privacy-policy/">Privacy Policy</a><a href="/terms/">Terms</a></div></div></footer>
+  <script src="/assets/js/analytics.js"></script>
+  <script src="/assets/js/site.js"></script>
+  <script src="/assets/js/tools.js"></script>
+</body>
+</html>

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JSON Formatter — Format and Minify JSON Locally</title>
+  <meta name="description" content="Format JSON and minify JSON locally in your browser. No uploads, no server-side processing, and no account needed.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://localcodeformat.com/json-formatter/">
+  <meta property="og:title" content="JSON Formatter — Local Code Format">
+  <meta property="og:description" content="Pretty-print and minify JSON locally in your browser.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://localcodeformat.com/json-formatter/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <script type="application/ld+json">
+  [{"@context":"https://schema.org","@type":"SoftwareApplication","name":"JSON Formatter","url":"https://localcodeformat.com/json-formatter/","description":"Format and minify JSON locally in your browser.","applicationCategory":"DeveloperApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://localcodeformat.com/"},{"@type":"ListItem","position":2,"name":"JSON Formatter","item":"https://localcodeformat.com/json-formatter/"}]},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Does this JSON formatter upload my data?","acceptedAnswer":{"@type":"Answer","text":"The formatter is designed to run locally in your browser, so the pasted JSON does not need to be sent to a remote formatting service."}},{"@type":"Question","name":"What is the difference between formatting and validating JSON?","acceptedAnswer":{"@type":"Answer","text":"Formatting makes JSON easier to read. Validation checks whether the JSON is actually syntactically valid and can be parsed."}},{"@type":"Question","name":"Can I minify JSON here too?","acceptedAnswer":{"@type":"Answer","text":"Yes. The formatter includes a minify option so you can collapse valid JSON into a compact single-line output."}}]}]
+  </script>
+</head>
+<body data-tool="json-formatter">
+  <header class="site-header"><div class="container site-header-inner"><a class="site-logo" href="/"><span class="site-logo-mark">{ }</span> Local Code Format</a><button class="menu-toggle" data-menu-toggle aria-label="Toggle menu">Menu</button><nav class="site-nav" data-menu><a href="/json-tools/">JSON Tools</a><a href="/formatters/">Formatters</a><a href="/validators/">Validators</a><a href="/guides/">Guides</a><a href="/about/">About</a></nav></div></header>
+  <section class="page-hero"><div class="container"><div class="breadcrumbs"><a href="/">Home</a><span>/</span><a href="/json-tools/">JSON Tools</a><span>/</span><span>JSON Formatter</span></div><h1>JSON Formatter</h1><p>Format JSON or minify JSON locally in your browser. This page is built for the do-intent query where the tool should be usable immediately.</p><div class="byline">Updated March 7, 2026 · Local browser processing · No account required</div></div></section>
+  <main class="section"><div class="container stack">
+    <div class="tool-layout">
+      <article class="card tool-shell">
+        <div class="tool-intro"><h2>Paste JSON and format it</h2><p class="muted">Use format for readability and minify when you need a compact version. Both run locally in your browser.</p></div>
+        <div class="field-group"><label for="json-input">JSON input</label><textarea id="json-input" placeholder='{"user":"sam","roles":["admin","editor"]}'></textarea></div>
+        <div class="field-group field-row"><div><label for="json-indent">Indent size</label><select id="json-indent"><option value="2">2 spaces</option><option value="4">4 spaces</option></select></div><div><label for="json-profile">Workflow tip</label><input id="json-profile" value="Debugging and readability" readonly></div></div>
+        <div class="action-row"><button class="btn btn-primary" id="json-format">Format JSON</button><button class="btn btn-secondary" id="json-minify">Minify JSON</button><button class="btn btn-ghost" id="json-clear">Clear</button></div>
+      </article>
+      <aside class="card output-shell">
+        <h2>Output</h2>
+        <div class="output-meta"><span class="status-badge status-warn" id="json-status">Waiting for input</span></div>
+        <div class="output-box"><pre id="json-output"></pre></div>
+        <div class="result-toolbar"><button class="btn btn-secondary" data-copy-target="json-output">Copy output</button></div>
+        <div class="explain-box"><pre id="json-explain">Paste JSON above, then format or minify it locally.</pre></div>
+      </aside>
+    </div>
+    <article class="card tool-card"><h2>When people search for JSON formatter</h2><p class="muted">Most searchers here are not looking for a tutorial first. They already have a payload and want a working tool immediately. That is why the formatter lives above the fold and the explanatory content sits below it.</p></article>
+    <div class="grid grid-2">
+      <article class="card tool-card"><h2>Common use cases</h2><ul class="check-list muted"><li>Inspecting API request and response bodies</li><li>Cleaning copied JSON from logs or config files</li><li>Making payloads readable before sharing in docs or tickets</li></ul></article>
+      <article class="card tool-card"><h2>Related pages</h2><ul class="plain-list muted"><li><a href="/json-validator/">JSON Validator</a></li><li><a href="/guides/how-to-format-json-safely/">How to Format JSON Safely</a></li><li><a href="/guides/json-formatter-vs-validator/">JSON Formatter vs Validator</a></li></ul></article>
+    </div>
+    <section class="card tool-card"><h2>FAQ</h2>
+      <div class="faq-item"><button class="faq-question">Does this JSON formatter upload my data?<span class="faq-icon">▾</span></button><div class="faq-answer"><p class="muted">No remote formatting service is required for the core formatter flow. The intent is local browser-side processing.</p></div></div>
+      <div class="faq-item"><button class="faq-question">Can I use it as a JSON prettifier?<span class="faq-icon">▾</span></button><div class="faq-answer"><p class="muted">Yes. JSON prettifier and JSON formatter are functionally the same task for most searchers.</p></div></div>
+      <div class="faq-item"><button class="faq-question">What if the JSON is invalid?<span class="faq-icon">▾</span></button><div class="faq-answer"><p class="muted">Use the validator flow or inspect the error message, then fix the syntax and format again.</p></div></div>
+    </section>
+  </div></main>
+  <footer class="footer"><div class="container footer-grid"><div><h4>Local Code Format</h4><p>Browser-based code formatting and validation tools built around trust, clarity, and repeat-use developer workflows.</p></div><div><h4>Core Tools</h4><a href="/json-formatter/">JSON Formatter</a><a href="/json-validator/">JSON Validator</a><a href="/sql-formatter/">SQL Formatter</a><a href="/html-formatter/">HTML Formatter</a></div><div><h4>Learn</h4><a href="/guides/">Guides</a><a href="/guides/how-to-format-json-safely/">How to Format JSON Safely</a><a href="/guides/json-formatter-vs-validator/">JSON Formatter vs Validator</a></div><div><h4>Trust</h4><a href="/about/">About</a><a href="/privacy-policy/">Privacy Policy</a><a href="/terms/">Terms</a></div></div></footer>
+  <script src="/assets/js/analytics.js"></script>
+  <script src="/assets/js/site.js"></script>
+  <script src="/assets/js/tools.js"></script>
+</body>
+</html>

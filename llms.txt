@@ -1,0 +1,1 @@
+Local Code Format helps developers format, validate, compare, and convert code or data directly in the browser without uploads.

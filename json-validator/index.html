@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>JSON Validator — Validate JSON Locally</title>
+  <meta name="description" content="Validate JSON locally in your browser, inspect syntax errors, and confirm payloads before use.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://localcodeformat.com/json-validator/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <script type="application/ld+json">
+  [{"@context":"https://schema.org","@type":"SoftwareApplication","name":"JSON Validator","url":"https://localcodeformat.com/json-validator/","description":"Validate JSON locally in your browser.","applicationCategory":"DeveloperApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://localcodeformat.com/"},{"@type":"ListItem","position":2,"name":"JSON Validator","item":"https://localcodeformat.com/json-validator/"}]}]
+  </script>
+</head>
+<body data-tool="json-validator">
+  <header class="site-header"><div class="container site-header-inner"><a class="site-logo" href="/"><span class="site-logo-mark">{ }</span> Local Code Format</a><button class="menu-toggle" data-menu-toggle aria-label="Toggle menu">Menu</button><nav class="site-nav" data-menu><a href="/json-tools/">JSON Tools</a><a href="/formatters/">Formatters</a><a href="/validators/">Validators</a><a href="/guides/">Guides</a><a href="/about/">About</a></nav></div></header>
+  <section class="page-hero"><div class="container"><div class="breadcrumbs"><a href="/">Home</a><span>/</span><a href="/validators/">Validators</a><span>/</span><span>JSON Validator</span></div><h1>JSON Validator</h1><p>Validate JSON locally before you send it into an API request, save it in a config file, or hand it to a parser that will fail on invalid syntax.</p><div class="byline">Updated March 7, 2026 · Built for correctness-first intent</div></div></section>
+  <main class="section"><div class="container stack">
+    <div class="tool-layout">
+      <article class="card tool-shell">
+        <div class="tool-intro"><h2>Paste JSON and validate it</h2><p class="muted">Use this when the question is “Is this valid?” rather than “Can you make this easier to read?”</p></div>
+        <div class="field-group"><label for="json-validator-input">JSON input</label><textarea id="json-validator-input" placeholder='{"ok":true,"count":2}'></textarea></div>
+        <div class="action-row"><button class="btn btn-primary" id="json-validate">Validate JSON</button></div>
+      </article>
+      <aside class="card output-shell">
+        <h2>Validation result</h2>
+        <div class="output-meta"><span class="status-badge status-warn" id="json-validator-status">Waiting for input</span></div>
+        <div class="output-box"><pre id="json-validator-output"></pre></div>
+        <div class="result-toolbar"><button class="btn btn-secondary" data-copy-target="json-validator-output">Copy output</button></div>
+        <div class="explain-box"><pre id="json-validator-explain">Paste JSON above and validate it locally.</pre></div>
+      </aside>
+    </div>
+    <div class="grid grid-2">
+      <article class="card tool-card"><h2>Validator vs formatter</h2><p class="muted">Validation checks syntax and parseability. Formatting only changes the presentation of already-valid JSON.</p><p><a href="/guides/json-formatter-vs-validator/">Read the comparison guide</a></p></article>
+      <article class="card tool-card"><h2>Related tools</h2><ul class="plain-list muted"><li><a href="/json-formatter/">JSON Formatter</a></li><li><a href="/guides/how-to-format-json-safely/">How to Format JSON Safely</a></li><li><a href="/guides/why-local-code-tools-are-safer/">Why local code tools are safer</a></li></ul></article>
+    </div>
+  </div></main>
+  <footer class="footer"><div class="container footer-grid"><div><h4>Local Code Format</h4><p>Browser-based code formatting and validation tools built around trust, clarity, and repeat-use developer workflows.</p></div><div><h4>Core Tools</h4><a href="/json-formatter/">JSON Formatter</a><a href="/json-validator/">JSON Validator</a><a href="/sql-formatter/">SQL Formatter</a><a href="/html-formatter/">HTML Formatter</a></div><div><h4>Learn</h4><a href="/guides/">Guides</a><a href="/guides/how-to-format-json-safely/">How to Format JSON Safely</a><a href="/guides/json-formatter-vs-validator/">JSON Formatter vs Validator</a></div><div><h4>Trust</h4><a href="/about/">About</a><a href="/privacy-policy/">Privacy Policy</a><a href="/terms/">Terms</a></div></div></footer>
+  <script src="/assets/js/analytics.js"></script>
+  <script src="/assets/js/site.js"></script>
+  <script src="/assets/js/tools.js"></script>
+</body>
+</html>

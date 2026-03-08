@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to Format SQL Queries Safely</title>
+  <meta name="description" content="A practical workflow for formatting SQL queries locally when they include production data, customer records, or sensitive business logic.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://localcodeformat.com/guides/how-to-format-sql-queries-safely/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="stylesheet" href="/assets/css/style.css">
+</head>
+<body>
+  <header class="site-header"><div class="container site-header-inner"><a class="site-logo" href="/"><span class="site-logo-mark">{ }</span> Local Code Format</a><button class="menu-toggle" data-menu-toggle aria-label="Toggle menu">Menu</button><nav class="site-nav" data-menu><a href="/json-tools/">JSON Tools</a><a href="/formatters/">Formatters</a><a href="/validators/">Validators</a><a href="/guides/">Guides</a><a href="/about/">About</a></nav></div></header>
+  <section class="page-hero"><div class="container"><div class="breadcrumbs"><a href="/">Home</a><span>/</span><a href="/guides/">Guides</a><span>/</span><span>How to Format SQL Queries Safely</span></div><h1>How to format SQL queries safely</h1><p>SQL often contains table names, filters, customer fields, and production logic you should not paste into a random online tool. The safest workflow is local formatting first, then sharing only what you intend to share.</p><div class="byline">Updated March 8, 2026 · SQL workflow guide</div></div></section>
+  <main class="section"><div class="container stack">
+    <article class="card tool-card">
+      <h2>When this matters</h2>
+      <p class="muted">If your query includes customer data, internal schema names, revenue logic, or temporary incident-response work, treat it like sensitive material. Formatting is useful, but where the formatting happens matters too.</p>
+    </article>
+    <article class="card tool-card">
+      <h2>Safe SQL formatting workflow</h2>
+      <ol class="plain-list muted">
+        <li>Copy only the query you need to inspect, not the whole debug transcript.</li>
+        <li>Use a browser-side formatter such as the <a href="/sql-formatter/">SQL formatter</a> so the text stays on your machine.</li>
+        <li>Check indentation, clause order, and line breaks after formatting.</li>
+        <li>Redact table names, IDs, or values before sharing the query with anyone else.</li>
+      </ol>
+    </article>
+    <article class="card tool-card">
+      <h2>What formatting helps with</h2>
+      <table class="data-table">
+        <thead><tr><th>Need</th><th>Why formatting helps</th></tr></thead>
+        <tbody>
+          <tr><td>Code review</td><td>Readable clauses make it easier to spot joins, filters, and ordering mistakes.</td></tr>
+          <tr><td>Debugging slow queries</td><td>Indented SQL helps you inspect nested conditions and repeated logic.</td></tr>
+          <tr><td>Documentation</td><td>Formatted queries are easier to paste into tickets, runbooks, and postmortems.</td></tr>
+          <tr><td>Redaction</td><td>Clearer structure makes it easier to remove or mask sensitive values before sharing.</td></tr>
+        </tbody>
+      </table>
+    </article>
+    <article class="card tool-card">
+      <h2>Related tools</h2>
+      <p><a href="/sql-formatter/">Format a SQL query</a>, compare query edits with the <a href="/diff-checker/">diff checker</a>, or move back to the main <a href="/formatters/">formatter hub</a>.</p>
+    </article>
+  </div></main>
+  <footer class="footer"><div class="container footer-grid"><div><h4>Local Code Format</h4><p>Browser-based code formatting and validation tools built around trust, clarity, and repeat-use developer workflows.</p></div><div><h4>Core Tools</h4><a href="/json-formatter/">JSON Formatter</a><a href="/json-validator/">JSON Validator</a><a href="/sql-formatter/">SQL Formatter</a><a href="/html-formatter/">HTML Formatter</a></div><div><h4>Learn</h4><a href="/guides/">Guides</a><a href="/guides/how-to-format-json-safely/">How to Format JSON Safely</a><a href="/guides/how-to-format-sql-queries-safely/">How to Format SQL Queries Safely</a><a href="/guides/json-formatter-vs-validator/">JSON Formatter vs Validator</a></div><div><h4>Trust</h4><a href="/about/">About</a><a href="/privacy-policy/">Privacy Policy</a><a href="/terms/">Terms</a></div></div></footer>
+  <script src="/assets/js/analytics.js"></script>
+  <script src="/assets/js/site.js"></script>
+</body>
+</html>
