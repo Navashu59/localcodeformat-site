@@ -3,33 +3,102 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Diff Checker — Compare Two Text Blocks Locally</title>
-  <meta name="description" content="Compare two text blocks locally in your browser with a fast diff checker for code, config, and content.">
+  <title>Diff Checker — Compare Text & AI Search Visibility Locally</title>
+  <meta name="description" content="Compare text blocks locally in your browser. New: Analyze AI search visibility by comparing organic results vs AI-generated answers for SEO optimization.">
   <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta property="og:title" content="Diff Checker — Compare Text & AI Search Visibility">
+  <meta property="og:description" content="Compare text blocks locally in your browser. New AI search analysis feature helps optimize content for AI Overviews and generative search results.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://localcodeformat.com/diff-checker/">
+  <meta property="og:image" content="https://localcodeformat.com/assets/images/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <link rel="canonical" href="https://localcodeformat.com/diff-checker/">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="stylesheet" href="/assets/css/style.css">
+  <script type="application/ld+json">
+  [{"@context":"https://schema.org","@type":"SoftwareApplication","name":"Diff Checker","url":"https://localcodeformat.com/diff-checker/","description":"Compare text blocks locally in your browser with AI search visibility analysis for SEO optimization.","applicationCategory":"DeveloperApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://localcodeformat.com/"},{"@type":"ListItem","position":2,"name":"Formatters","item":"https://localcodeformat.com/formatters/"},{"@type":"ListItem","position":3,"name":"Diff Checker","item":"https://localcodeformat.com/diff-checker/"}]},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Does the diff checker upload my text?","acceptedAnswer":{"@type":"Answer","text":"No. All text comparison happens locally in your browser, so your content never leaves your machine. This is ideal for sensitive documents, code, or proprietary information."}},{"@type":"Question","name":"What types of text can I compare?","acceptedAnswer":{"@type":"Answer","text":"You can compare any plain text, including code (JSON, SQL, HTML, etc.), configuration files, documentation, and content drafts. The diff checker highlights added, removed, and changed lines."}},{"@type":"Question","name":"Can I compare large text files?","acceptedAnswer":{"@type":"Answer","text":"Yes, but very large files (10,000+ lines each) may slow down browser performance. For massive comparisons, consider splitting them into smaller chunks or using a desktop diff tool."}},{"@type":"Question","name":"What is AI Search Analysis?","acceptedAnswer":{"@type":"Answer","text":"AI Search Analysis helps you compare traditional organic search results with AI-generated answers (from Gemini, ChatGPT, Claude, etc.) to understand how your content appears in AI Overviews and optimize for AI search visibility."}},{"@type":"Question","name":"How does AI search visibility affect SEO?","acceptedAnswer":{"@type":"Answer","text":"As AI Overviews and generative search become more common, appearing in AI-generated answers is crucial for visibility. This tool helps identify content gaps, EEAT signals, and optimization opportunities for better AI search performance."}}]}]
+  </script>
 </head>
 <body data-tool="diff-checker">
-  <header class="site-header"><div class="container site-header-inner"><a class="site-logo" href="/"><span class="site-logo-mark">{ }</span> Local Code Format</a><button class="menu-toggle" data-menu-toggle aria-label="Toggle menu">Menu</button><nav class="site-nav" data-menu><a href="/json-tools/">JSON Tools</a><a href="/formatters/">Formatters</a><a href="/validators/">Validators</a><a href="/guides/">Guides</a><a href="/about/">About</a></nav></div></header>
-  <section class="page-hero"><div class="container"><div class="breadcrumbs"><a href="/">Home</a><span>/</span><a href="/formatters/">Formatters</a><span>/</span><span>Diff Checker</span></div><h1>Diff Checker</h1><p>Compare two text blocks locally in your browser to spot what changed between versions of a query, config, snippet, or copy draft.</p><div class="byline">Updated March 7, 2026 · Local browser comparison</div></div></section>
-  <main class="section"><div class="container tool-layout">
-    <article class="card tool-shell">
-      <div class="field-group"><label for="diff-left">Original text</label><textarea id="diff-left" placeholder="Line one&#10;Line two&#10;Line three"></textarea></div>
-      <div class="field-group"><label for="diff-right">Updated text</label><textarea id="diff-right" placeholder="Line one&#10;Line two changed&#10;Line three"></textarea></div>
-      <div class="action-row"><button class="btn btn-primary" id="diff-compare">Compare text</button></div>
-    </article>
-    <aside class="card output-shell">
-      <h2>Diff output</h2>
-      <div class="output-meta"><span class="status-badge status-warn" id="diff-status">Waiting for input</span></div>
-      <div class="output-box"><pre id="diff-output"></pre></div>
-      <div class="result-toolbar"><button class="btn btn-secondary" data-copy-target="diff-output">Copy output</button></div>
-      <div class="explain-box"><pre id="diff-explain">Paste both versions above and compare them locally.</pre></div>
-    </aside>
+  <header class="site-header"><div class="container site-header-inner"><a class="site-logo" href="/"><span class="site-logo-mark">{ }</span> Local Code Format</a><button type="button" class="menu-toggle" data-menu-toggle aria-label="Toggle menu">Menu</button><nav class="site-nav" data-menu><a href="/json-tools/">JSON Tools</a><a href="/formatters/">Formatters</a><a href="/validators/">Validators</a><a href="/guides/">Guides</a><a href="/about/">About</a></nav></div></header>
+  <section class="page-hero"><div class="container"><div class="breadcrumbs"><a href="/">Home</a><span>/</span><a href="/formatters/">Formatters</a><span>/</span><span>Diff Checker</span></div><h1>Diff Checker</h1><p>Compare text blocks locally in your browser. <strong>New AI Search Analysis</strong> helps optimize content for AI Overviews and generative search results by comparing organic vs AI-generated answers.</p><div class="byline">Updated March 17, 2026 · Local browser comparison · AI search visibility</div></div></section>
+  <main class="section"><div class="container stack">
+    <div class="tool-layout">
+      <article class="card tool-shell">
+        <div class="mode-selector">
+          <button type="button" class="mode-btn active" data-mode="text">Text Comparison</button>
+          <button type="button" class="mode-btn" data-mode="ai-search">AI Search Comparison</button>
+        </div>
+        
+        <div class="field-group" id="text-comparison-fields">
+          <label for="diff-left">Original text</label>
+          <textarea id="diff-left" placeholder="Line one&#10;Line two&#10;Line three"></textarea>
+        </div>
+        <div class="field-group" id="text-comparison-fields">
+          <label for="diff-right">Updated text</label>
+          <textarea id="diff-right" placeholder="Line one&#10;Line two changed&#10;Line three"></textarea>
+        </div>
+        
+        <div class="field-group hidden" id="ai-search-fields">
+          <label for="ai-organic">Traditional Organic Results</label>
+          <textarea id="ai-organic" placeholder="Paste traditional search results or content that appears in standard SERPs..."></textarea>
+        </div>
+        <div class="field-group hidden" id="ai-search-fields">
+          <label for="ai-generated">AI-Generated Answers</label>
+          <textarea id="ai-generated" placeholder="Paste AI-generated responses (Gemini, ChatGPT, Claude, etc.)..."></textarea>
+        </div>
+        
+        <div class="action-row">
+          <button type="button" class="btn btn-primary" id="diff-compare">Compare text</button>
+          <button type="button" class="btn btn-secondary hidden" id="ai-analyze">Analyze AI Search Visibility</button>
+        </div>
+      </article>
+      <aside class="card output-shell">
+        <h2>Diff output</h2>
+        <div class="output-meta"><span class="status-badge status-warn" id="diff-status">Waiting for input</span></div>
+        <div class="output-box"><pre id="diff-output"></pre></div>
+        <div class="result-toolbar"><button type="button" class="btn btn-secondary" data-copy-target="diff-output">Copy output</button></div>
+        <div class="explain-box"><pre id="diff-explain">Paste both versions above and compare them locally.</pre></div>
+        
+        <div class="ai-analysis hidden" id="ai-analysis">
+          <h3>AI Search Visibility Analysis</h3>
+          <div class="analysis-grid">
+            <div class="analysis-card">
+              <h4>Content Differences</h4>
+              <ul id="ai-content-diff"></ul>
+            </div>
+            <div class="analysis-card">
+              <h4>Optimization Opportunities</h4>
+              <ul id="ai-optimization"></ul>
+            </div>
+            <div class="analysis-card">
+              <h4>EEAT Signals</h4>
+              <ul id="ai-eeat"></ul>
+            </div>
+            <div class="analysis-card">
+              <h4>Next Steps</h4>
+              <ul id="ai-next-steps"></ul>
+            </div>
+          </div>
+        </div>
+      </aside>
+    </div>
+    <div class="grid grid-2">
+      <article class="card tool-card"><h2>Use diff when you need to verify what changed</h2><ul class="plain-list muted"><li><a href="/guides/how-to-compare-text-changes-locally/">How to Compare Text Changes Locally</a></li><li><a href="/sql-formatter/">Compare query edits after formatting SQL</a></li><li><a href="/html-formatter/">Check markup changes after formatting HTML</a></li></ul></article>
+      <article class="card tool-card"><h2>Common high-intent jobs</h2><ul class="plain-list muted"><li>Review before/after SQL query changes</li><li>Check whether cleaned HTML changed structure</li><li>Compare config revisions before deployment</li></ul></article>
+    </div>
+    <section class="card tool-card"><h2>FAQ</h2>
+      <div class="faq-item"><button type="button" class="faq-question">Does the diff checker upload my text?<span class="faq-icon">▾</span></button><div class="faq-answer"><p class="muted">No. All text comparison happens locally in your browser, so your content never leaves your machine. This is ideal for sensitive documents, code, or proprietary information.</p></div></div>
+      <div class="faq-item"><button type="button" class="faq-question">What types of text can I compare?<span class="faq-icon">▾</span></button><div class="faq-answer"><p class="muted">You can compare any plain text, including code (JSON, SQL, HTML, etc.), configuration files, documentation, and content drafts. The diff checker highlights added, removed, and changed lines.</p></div></div>
+      <div class="faq-item"><button type="button" class="faq-question">Can I compare large text files?<span class="faq-icon">▾</span></button><div class="faq-answer"><p class="muted">Yes, but very large files (10,000+ lines each) may slow down browser performance. For massive comparisons, consider splitting them into smaller chunks or using a desktop diff tool.</p></div></div>
+      <div class="faq-item"><button type="button" class="faq-question">What is AI Search Analysis?<span class="faq-icon">▾</span></button><div class="faq-answer"><p class="muted">AI Search Analysis helps you compare traditional organic search results with AI-generated answers (from Gemini, ChatGPT, Claude, etc.) to understand how your content appears in AI Overviews and optimize for AI search visibility.</p></div></div>
+      <div class="faq-item"><button type="button" class="faq-question">How does AI search visibility affect SEO?<span class="faq-icon">▾</span></button><div class="faq-answer"><p class="muted">As AI Overviews and generative search become more common, appearing in AI-generated answers is crucial for visibility. This tool helps identify content gaps, EEAT signals, and optimization opportunities for better AI search performance.</p></div></div>
+    </section>
   </div></main>
-  <footer class="footer"><div class="container footer-grid"><div><h4>Local Code Format</h4><p>Browser-based code formatting and validation tools built around trust, clarity, and repeat-use developer workflows.</p></div><div><h4>Core Tools</h4><a href="/json-formatter/">JSON Formatter</a><a href="/json-validator/">JSON Validator</a><a href="/sql-formatter/">SQL Formatter</a><a href="/html-formatter/">HTML Formatter</a></div><div><h4>Learn</h4><a href="/guides/">Guides</a><a href="/guides/how-to-format-json-safely/">How to Format JSON Safely</a><a href="/guides/json-formatter-vs-validator/">JSON Formatter vs Validator</a></div><div><h4>Trust</h4><a href="/about/">About</a><a href="/privacy-policy/">Privacy Policy</a><a href="/terms/">Terms</a></div></div></footer>
+  <footer class="footer"><div class="container footer-grid"><div><h4>Local Code Format</h4><p>Browser-based JSON, SQL, HTML, and diff tools that help you clean up code without uploading it elsewhere.</p></div><div><h4>Core Tools</h4><a href="/json-formatter/">JSON Formatter</a><a href="/json-validator/">JSON Validator</a><a href="/sql-formatter/">SQL Formatter</a><a href="/html-formatter/">HTML Formatter</a></div><div><h4>Learn</h4><a href="/guides/">Guides</a><a href="/guides/how-to-format-json-safely/">How to Format JSON Safely</a><a href="/guides/json-formatter-vs-validator/">JSON Formatter vs Validator</a></div><div><h4>Trust</h4><a href="/about/">About</a><a href="/privacy-policy/">Privacy Policy</a><a href="/terms/">Terms</a></div></div></footer>
   <script src="/assets/js/analytics.js"></script>
   <script src="/assets/js/site.js"></script>
   <script src="/assets/js/tools.js"></script>

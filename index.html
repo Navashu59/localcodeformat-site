@@ -3,20 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Local Code Format — Browser-Based JSON, SQL, HTML Formatter Tools</title>
-  <meta name="description" content="Privacy-first code formatting and validation tools. Format JSON, validate JSON, format SQL, prettify HTML, and compare text in your browser without uploads.">
+  <title>JSON Formatter & Code Beautifier - Format, Validate, Minify Instantly</title>
+  <meta name="description" content="Format JSON, HTML, CSS code instantly. Beautify, validate, minify - no installation needed. Copy & paste formatted code. Free online tool!">
   <meta name="robots" content="index, follow, max-image-preview:large">
   <link rel="canonical" href="https://localcodeformat.com/">
-  <meta property="og:title" content="Local Code Format — Browser-Based Formatter Tools">
-  <meta property="og:description" content="Format and validate code in your browser. No uploads. No server processing.">
+  <meta property="og:title" content="JSON Formatter & Code Beautifier - Format, Validate, Minify Instantly">
+  <meta property="og:description" content="Format JSON, HTML, CSS code instantly. Beautify, validate, minify - no installation needed. Copy & paste formatted code. Free online tool!">
   <meta property="og:type" content="website">
   <meta property="og:url" content="https://localcodeformat.com/">
+  <meta property="og:image" content="https://localcodeformat.com/assets/images/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="stylesheet" href="/assets/css/style.css">
   <script type="application/ld+json">
-  {"@context":"https://schema.org","@type":"WebSite","name":"Local Code Format","url":"https://localcodeformat.com/","description":"Privacy-first browser-based code formatting and validation tools.","potentialAction":{"@type":"SearchAction","target":"https://localcodeformat.com/formatters/?q={search_term_string}","query-input":"required name=search_term_string"}}
+  {"@context":"https://schema.org","@type":"WebSite","name":"JSON Formatter & Code Beautifier - Format, Validate, Minify Instantly","url":"https://localcodeformat.com/","description":"Format JSON, HTML, CSS code instantly. Beautify, validate, minify - no installation needed. Copy & paste formatted code. Free online tool!"}
   </script>
 </head>
 <body>
@@ -37,23 +40,28 @@
   <section class="hero">
     <div class="container hero-grid">
       <div>
-        <div class="hero-eyebrow">Privacy-first developer workflow tools</div>
-        <h1>Format and validate code in your browser. No uploads. No server processing.</h1>
-        <p>Local Code Format is built for developers who need JSON, SQL, HTML, and diff tools that feel fast, stay trustworthy, and keep sensitive code on the machine where it already lives.</p>
+        <div class="hero-eyebrow">Private browser-based code tools</div>
+        <h1>Format JSON, SQL, and HTML locally. Validate payloads and compare text without uploads.</h1>
+        <p>Local Code Format is a browser-based tool site for developers who need to clean JSON, check whether JSON is valid, make SQL readable, tidy HTML, or compare two versions of text without sending code to a server.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="/json-formatter/">Open JSON Formatter</a>
+          <a class="btn btn-secondary" href="/sql-tools/">Browse SQL Tools</a>
+          <a class="btn btn-ghost" href="/guides/">Read Practical Guides</a>
+        </div>
         <div class="trust-strip">
           <div class="trust-item"><strong>Local-only</strong><span class="muted">Formatting runs in the browser, not on a remote server.</span></div>
-          <div class="trust-item"><strong>Task-first</strong><span class="muted">Tool above the fold for searchers who want to do, not read fluff.</span></div>
-          <div class="trust-item"><strong>Clustered tools</strong><span class="muted">JSON, SQL, HTML, and diff workflows that reinforce each other.</span></div>
+          <div class="trust-item"><strong>Task-first</strong><span class="muted">The tool is visible first, so you can get the job done without scrolling through filler.</span></div>
+          <div class="trust-item"><strong>Connected tools</strong><span class="muted">Move from formatting to validation, SQL review, HTML cleanup, and diff checks without losing context.</span></div>
           <div class="trust-item"><strong>Built for repeat use</strong><span class="muted">Bookmarkable utilities for everyday debugging and cleanup work.</span></div>
         </div>
       </div>
       <div class="hero-card">
-        <strong>Launch focus</strong>
+        <strong>How to use this site</strong>
         <ul class="hero-list">
-          <li>JSON formatter and validator as the first authority cluster</li>
-          <li>HTML, SQL, and diff workflows as adjacent high-intent tools</li>
-          <li>Support guides that answer real workflow questions, not generic dev blogging</li>
-          <li>Trust pages that explain exactly how local processing works</li>
+          <li>Open the tool that matches your job: JSON, SQL, HTML, or diff</li>
+          <li>Paste your code or text into the tool and get an immediate result</li>
+          <li>Copy the cleaned output back into your editor, ticket, or docs</li>
+          <li>Use a guide if you need help choosing the right tool or avoiding mistakes</li>
         </ul>
       </div>
     </div>
@@ -61,37 +69,221 @@
 
   <section class="section">
     <div class="container">
-      <h2 class="section-title">Core tools for high-intent searches</h2>
-      <p class="section-intro">The first wave targets searchers who want a working formatter or validator immediately. Each tool page is built to match transactional intent first, then strengthen related authority clusters through guides and adjacent utilities.</p>
+      <h2 class="section-title">What you can do here</h2>
+      <p class="section-intro">Most visits fall into one of these jobs: make JSON readable, check whether JSON is valid, clean up SQL, tidy HTML, or compare two versions of text before you ship.</p>
+      <div class="grid grid-3">
+        <article class="card tool-card">
+          <h3>Clean messy JSON</h3>
+          <p>Format API payloads, request bodies, and config snippets so they are readable and easy to copy back out.</p>
+        </article>
+        <article class="card tool-card">
+          <h3>Validate before you send</h3>
+          <p>Check whether broken JSON will parse before it causes an error in a request, build step, or config file.</p>
+        </article>
+        <article class="card tool-card">
+          <h3>Review code and markup safely</h3>
+          <p>Make SQL easier to read, tidy HTML without changing structure, and compare text changes without leaving the browser.</p>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- Code Examples Section -->
+  <section class="section" style="background: #f8fafc; border-top: 1px solid #e2e8f0; border-bottom: 1px solid #e2e8f0;">
+    <div class="container">
+      <h2 class="section-title">See It in Action: Code Examples</h2>
+      <p class="section-intro">Here's how our tools transform messy code into clean, readable formats. All processing happens locally in your browser.</p>
+      
+      <div class="grid grid-2" style="gap: 2rem; margin-top: 2rem;">
+        
+        <div class="code-example">
+          <h3 style="margin-top: 0; color: #1e40af;">📊 JSON Formatting Example</h3>
+          <div class="code-comparison">
+            <div class="code-block">
+              <h4 style="font-size: 0.9rem; margin: 0 0 0.5rem; color: #64748b;">Before (Minified JSON)</h4>
+              <pre style="margin: 0; padding: 1rem; background: #1e293b; color: #e2e8f0; border-radius: 6px; font-size: 0.85rem; overflow-x: auto;"><code>{"apiVersion":"v1","data":{"users":[{"id":1,"name":"Alex","email":"alex@example.com","active":true},{"id":2,"name":"Sam","email":"sam@example.com","active":false}],"total":2},"status":"success"}</code></pre>
+            </div>
+            <div class="code-block">
+              <h4 style="font-size: 0.9rem; margin: 0 0 0.5rem; color: #64748b;">After (Formatted JSON)</h4>
+              <pre style="margin: 0; padding: 1rem; background: #1e293b; color: #e2e8f0; border-radius: 6px; font-size: 0.85rem; overflow-x: auto;"><code>{
+  "apiVersion": "v1",
+  "data": {
+    "users": [
+      {
+        "id": 1,
+        "name": "Alex",
+        "email": "alex@example.com",
+        "active": true
+      },
+      {
+        "id": 2,
+        "name": "Sam",
+        "email": "sam@example.com",
+        "active": false
+      }
+    ],
+    "total": 2
+  },
+  "status": "success"
+}</code></pre>
+            </div>
+          </div>
+          <p style="margin: 1rem 0 0; font-size: 0.9rem; color: #64748b;">
+            <strong>Use case:</strong> Debugging API responses, cleaning config files, preparing data for documentation
+          </p>
+        </div>
+        
+        <div class="code-example">
+          <h3 style="margin-top: 0; color: #1e40af;">🗃️ SQL Formatting Example</h3>
+          <div class="code-comparison">
+            <div class="code-block">
+              <h4 style="font-size: 0.9rem; margin: 0 0 0.5rem; color: #64748b;">Before (Unformatted SQL)</h4>
+              <pre style="margin: 0; padding: 1rem; background: #1e293b; color: #e2e8f0; border-radius: 6px; font-size: 0.85rem; overflow-x: auto;"><code>SELECT u.id,u.name,u.email,o.total_amount,o.order_date FROM users u LEFT JOIN orders o ON u.id=o.user_id WHERE u.active=1 AND o.order_date>='2024-01-01' ORDER BY o.total_amount DESC LIMIT 10</code></pre>
+            </div>
+            <div class="code-block">
+              <h4 style="font-size: 0.9rem; margin: 0 0 0.5rem; color: #64748b;">After (Formatted SQL)</h4>
+              <pre style="margin: 0; padding: 1rem; background: #1e293b; color: #e2e8f0; border-radius: 6px; font-size: 0.85rem; overflow-x: auto;"><code>SELECT
+  u.id,
+  u.name,
+  u.email,
+  o.total_amount,
+  o.order_date
+FROM users u
+LEFT JOIN orders o ON u.id = o.user_id
+WHERE u.active = 1
+  AND o.order_date >= '2024-01-01'
+ORDER BY o.total_amount DESC
+LIMIT 10</code></pre>
+            </div>
+          </div>
+          <p style="margin: 1rem 0 0; font-size: 0.9rem; color: #64748b;">
+            <strong>Use case:</strong> Code reviews, query optimization, sharing SQL with team members
+          </p>
+        </div>
+        
+        <div class="code-example">
+          <h3 style="margin-top: 0; color: #1e40af;">🛡️ JSON Validation Example</h3>
+          <div class="code-comparison">
+            <div class="code-block">
+              <h4 style="font-size: 0.9rem; margin: 0 0 0.5rem; color: #64748b;">Invalid JSON (Common Error)</h4>
+              <pre style="margin: 0; padding: 1rem; background: #1e293b; color: #e2e8f0; border-radius: 6px; font-size: 0.85rem; overflow-x: auto;"><code>{
+  "name": "Test",
+  "value": 123
+  "active": true
+}</code></pre>
+              <p style="margin: 0.5rem 0 0; font-size: 0.8rem; color: #ef4444;">
+                ❌ Error: Missing comma after "value": 123
+              </p>
+            </div>
+            <div class="code-block">
+              <h4 style="font-size: 0.9rem; margin: 0 0 0.5rem; color: #64748b;">Valid JSON (Fixed)</h4>
+              <pre style="margin: 0; padding: 1rem; background: #1e293b; color: #e2e8f0; border-radius: 6px; font-size: 0.85rem; overflow-x: auto;"><code>{
+  "name": "Test",
+  "value": 123,
+  "active": true
+}</code></pre>
+              <p style="margin: 0.5rem 0 0; font-size: 0.8rem; color: #10b981;">
+                ✅ Valid JSON
+              </p>
+            </div>
+          </div>
+          <p style="margin: 1rem 0 0; font-size: 0.9rem; color: #64748b;">
+            <strong>Use case:</strong> API development, configuration validation, data quality checks
+          </p>
+        </div>
+        
+        <div class="code-example">
+          <h3 style="margin-top: 0; color: #1e40af;">🌐 HTML Formatting Example</h3>
+          <div class="code-comparison">
+            <div class="code-block">
+              <h4 style="font-size: 0.9rem; margin: 0 0 0.5rem; color: #64748b;">Before (Minified HTML)</h4>
+              <pre style="margin: 0; padding: 1rem; background: #1e293b; color: #e2e8f0; border-radius: 6px; font-size: 0.85rem; overflow-x: auto;"><code>&lt;!DOCTYPE html&gt;&lt;html&gt;&lt;head&gt;&lt;title&gt;Example&lt;/title&gt;&lt;/head&gt;&lt;body&gt;&lt;div class="container"&gt;&lt;h1&gt;Hello&lt;/h1&gt;&lt;p&gt;This is a test&lt;/p&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</code></pre>
+            </div>
+            <div class="code-block">
+              <h4 style="font-size: 0.9rem; margin: 0 0 0.5rem; color: #64748b;">After (Formatted HTML)</h4>
+              <pre style="margin: 0; padding: 1rem; background: #1e293b; color: #e2e8f0; border-radius: 6px; font-size: 0.85rem; overflow-x: auto;"><code>&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+&lt;head&gt;
+  &lt;title&gt;Example&lt;/title&gt;
+&lt;/head&gt;
+&lt;body&gt;
+  &lt;div class="container"&gt;
+    &lt;h1&gt;Hello&lt;/h1&gt;
+    &lt;p&gt;This is a test&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+            </div>
+          </div>
+          <p style="margin: 1rem 0 0; font-size: 0.9rem; color: #64748b;">
+            <strong>Use case:</strong> Debugging markup, code reviews, learning HTML structure
+          </p>
+        </div>
+        
+      </div>
+      
+      <div style="margin-top: 2rem; padding: 1.5rem; border: 1px solid #dbeafe; border-radius: 10px; background: #eff6ff;">
+        <h3 style="margin-top: 0; color: #1e40af;">💡 How to Use These Examples</h3>
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1rem; margin-top: 1rem;">
+          <div>
+            <h4 style="margin: 0 0 0.5rem; font-size: 1rem;">1. Copy and Test</h4>
+            <p style="margin: 0; font-size: 0.9rem;">Copy the "Before" examples into our tools to see the transformation instantly.</p>
+          </div>
+          <div>
+            <h4 style="margin: 0 0 0.5rem; font-size: 1rem;">2. Learn Patterns</h4>
+            <p style="margin: 0; font-size: 0.9rem;">Study the formatting patterns to understand how our tools structure code.</p>
+          </div>
+          <div>
+            <h4 style="margin: 0 0 0.5rem; font-size: 1rem;">3. Apply to Your Code</h4>
+            <p style="margin: 0; font-size: 0.9rem;">Use the same principles to format your own JSON, SQL, HTML, and other code.</p>
+          </div>
+        </div>
+        <p style="margin: 1rem 0 0; font-size: 0.9rem;">
+          <strong>Remember:</strong> All processing happens locally in your browser. Your code never leaves your computer.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <h2 class="section-title">Pick your tool</h2>
+      <p class="section-intro">Use one of these pages to get straight into the task without creating an account or uploading code elsewhere.</p>
       <div class="grid grid-3">
         <article class="card tool-card">
           <h3><a href="/json-formatter/">JSON Formatter</a></h3>
-          <p>Pretty-print, minify, and clean JSON safely in the browser. Best fit for copy-paste debugging workflows.</p>
+          <p>Pretty-print, minify, and clean JSON safely in the browser when you need a readable payload fast.</p>
+          <div class="card-links"><a class="card-cta" href="/json-formatter/">Open tool</a><a href="/guides/how-to-validate-json-before-formatting/">When to validate first</a></div>
           <div class="pill-row"><span class="pill">json formatter</span><span class="pill">json prettifier</span></div>
         </article>
         <article class="card tool-card">
           <h3><a href="/json-validator/">JSON Validator</a></h3>
           <p>Check JSON validity, pinpoint parse errors, and move directly into formatting or repair.</p>
+          <div class="card-links"><a class="card-cta" href="/json-validator/">Open tool</a><a href="/guides/how-to-validate-json-before-formatting/">Read guide</a></div>
           <div class="pill-row"><span class="pill">json validator</span><span class="pill">json error finder</span></div>
         </article>
         <article class="card tool-card">
           <h3><a href="/sql-formatter/">SQL Formatter</a></h3>
-          <p>Make long SQL queries readable for reviews, debugging, and fast paste-share workflows.</p>
+          <p>Make long SQL queries readable before review, debugging, or sharing a cleaned-up query with a teammate.</p>
+          <div class="card-links"><a class="card-cta" href="/sql-formatter/">Open tool</a><a href="/sql-tools/">More SQL help</a></div>
           <div class="pill-row"><span class="pill">sql formatter</span><span class="pill">pretty sql</span></div>
         </article>
         <article class="card tool-card">
           <h3><a href="/html-formatter/">HTML Formatter</a></h3>
           <p>Indent messy markup, improve readability, and inspect tag structure without leaving the browser.</p>
+          <div class="card-links"><a class="card-cta" href="/html-formatter/">Open tool</a><a href="/guides/how-to-format-html-without-breaking-markup/">HTML guide</a></div>
           <div class="pill-row"><span class="pill">html formatter</span><span class="pill">html beautifier</span></div>
         </article>
         <article class="card tool-card">
           <h3><a href="/diff-checker/">Diff Checker</a></h3>
           <p>Compare two text blocks and spot line-by-line changes quickly when debugging code or content.</p>
+          <div class="card-links"><a class="card-cta" href="/diff-checker/">Open tool</a><a href="/guides/how-to-compare-text-changes-locally/">Comparison guide</a></div>
           <div class="pill-row"><span class="pill">diff checker</span><span class="pill">text compare</span></div>
         </article>
         <article class="card tool-card">
           <h3><a href="/guides/why-local-code-tools-are-safer/">Why local-only matters</a></h3>
-          <p>Support content that reinforces the trust angle users actually care about when handling sensitive code and payloads.</p>
+          <p>Read this when you need to know why browser-only tools are safer for request bodies, logs, queries, and config files.</p>
+          <div class="card-links"><a class="card-cta" href="/guides/why-local-code-tools-are-safer/">Read guide</a><a href="/guides/">All guides</a></div>
           <div class="pill-row"><span class="pill">privacy-first</span><span class="pill">browser-side</span></div>
         </article>
       </div>
@@ -100,27 +292,32 @@
 
   <section class="section">
     <div class="container">
-      <h2 class="section-title">Authority is built by workflow clusters</h2>
-      <p class="section-intro">This site is not trying to rank with random developer buzzwords. Each cluster groups semantically adjacent pages so that tool pages, support guides, and hubs reinforce the same search territory.</p>
+      <h2 class="section-title">Need help choosing the right page?</h2>
+      <p class="section-intro">If you are not sure whether you should format first, validate first, or open a more specific page, start with one of these short paths.</p>
       <div class="grid grid-2">
         <div class="card tool-card">
-          <h3>JSON cluster first</h3>
-          <p>The first authority wedge is JSON because it combines high-volume search demand, repeat use, and the strongest fit for the local-only trust promise.</p>
+          <h3>JSON cleanup and validation</h3>
+          <p>Use these pages when you need to fix broken payloads, clean a response body, or make JSON readable before sharing it with a teammate.</p>
           <ul class="plain-list muted">
             <li><a href="/json-formatter/">JSON Formatter</a></li>
             <li><a href="/json-validator/">JSON Validator</a></li>
+            <li><a href="/json-tools/">JSON Tools hub</a></li>
             <li><a href="/guides/how-to-format-json-safely/">How to Format JSON Safely</a></li>
+            <li><a href="/guides/how-to-validate-json-before-formatting/">How to Validate JSON Before Formatting</a></li>
             <li><a href="/guides/json-formatter-vs-validator/">JSON Formatter vs Validator</a></li>
           </ul>
         </div>
         <div class="card tool-card">
-          <h3>Expand by adjacent workflows</h3>
-          <p>SQL, HTML, and diff tools extend the site into neighboring developer tasks without diluting the topic boundary.</p>
+          <h3>SQL, HTML, and diff review</h3>
+          <p>These pages are for the jobs that happen right after cleanup: making queries readable, inspecting markup, and spotting text changes before you ship them.</p>
           <ul class="plain-list muted">
+            <li><a href="/sql-tools/">SQL Tools Hub</a></li>
             <li><a href="/sql-formatter/">SQL Formatter</a></li>
             <li><a href="/html-formatter/">HTML Formatter</a></li>
             <li><a href="/diff-checker/">Diff Checker</a></li>
             <li><a href="/guides/how-to-format-sql-queries-safely/">How to Format SQL Queries Safely</a></li>
+            <li><a href="/guides/how-to-format-html-without-breaking-markup/">How to Format HTML Without Breaking Markup</a></li>
+            <li><a href="/guides/how-to-compare-text-changes-locally/">How to Compare Text Changes Locally</a></li>
             <li><a href="/validators/">Validator hub</a></li>
           </ul>
         </div>
@@ -130,9 +327,37 @@
 
   <section class="section">
     <div class="container">
+      <h2 class="section-title">Read a guide when you need the next step</h2>
+      <p class="section-intro">These guides are here for the questions that usually come right after opening a tool: what to use first, how to handle sensitive code safely, and how to avoid breaking markup or queries.</p>
+      <div class="grid grid-2">
+        <article class="card tool-card">
+          <h3>If you are working with JSON</h3>
+          <p class="muted">Start here if you are trying to understand what tool to use, how to validate first, or how to avoid exposing sensitive payloads.</p>
+          <ul class="plain-list muted">
+            <li><a href="/guides/how-to-validate-json-before-formatting/">How to Validate JSON Before Formatting</a></li>
+            <li><a href="/guides/json-formatter-vs-validator/">JSON Formatter vs Validator</a></li>
+            <li><a href="/guides/how-to-format-json-safely/">How to Format JSON Safely</a></li>
+          </ul>
+        </article>
+        <article class="card tool-card">
+          <h3>If you are reviewing SQL, HTML, or text changes</h3>
+          <p class="muted">Use these when the problem is not “format this” but “help me inspect this safely and understand what changed.”</p>
+          <ul class="plain-list muted">
+            <li><a href="/sql-tools/">SQL Tools Hub</a></li>
+            <li><a href="/guides/how-to-format-html-without-breaking-markup/">How to Format HTML Without Breaking Markup</a></li>
+            <li><a href="/guides/how-to-format-sql-queries-safely/">How to Format SQL Queries Safely</a></li>
+            <li><a href="/guides/how-to-compare-text-changes-locally/">How to Compare Text Changes Locally</a></li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
       <div class="callout">
-        <strong>Trust is part of the product, not an afterthought.</strong>
-        <p class="muted">If a user searches for a formatter because they are cleaning a JWT payload, an API response, a SQL query, or customer data, they need more than a pretty UI. They need a clear answer to what happens to their code. That is why Local Code Format leads with local-only processing, plain-language privacy explanations, and direct tool workflows instead of generic blog filler.</p>
+        <strong>Your code stays in your browser while you work.</strong>
+        <p class="muted">Use Local Code Format when you want to clean JSON, validate a payload, format SQL, inspect HTML, or compare text changes without pasting sensitive material into a random third-party tool. Open the tool, paste what you have, get the result, and move on.</p>
       </div>
     </div>
   </section>
@@ -141,7 +366,7 @@
     <div class="container footer-grid">
       <div>
         <h4>Local Code Format</h4>
-        <p>Browser-based code formatting and validation tools built around trust, clarity, and repeat-use developer workflows.</p>
+        <p>Browser-based JSON, SQL, HTML, and diff tools that help you clean up code without uploading it elsewhere.</p>
       </div>
       <div>
         <h4>Core Tools</h4>

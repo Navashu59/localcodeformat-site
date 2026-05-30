@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>How to Validate JSON Before Formatting a Broken Payload</title>
+  <meta name="description" content="Use this workflow when JSON might be broken. Learn when to validate first, which errors to fix, and when to move into formatting.">
+  <meta name="robots" content="index, follow, max-image-preview:large">
+  <link rel="canonical" href="https://localcodeformat.com/guides/how-to-validate-json-before-formatting/">
+  <link rel="icon" href="/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="/favicon.ico" sizes="any">
+  <link rel="apple-touch-icon" href="/apple-touch-icon.png">
+  <link rel="stylesheet" href="/assets/css/style.css">
+  <script type="application/ld+json">
+  [{"@context":"https://schema.org","@type":"TechArticle","headline":"How to Validate JSON Before Formatting a Broken Payload","url":"https://localcodeformat.com/guides/how-to-validate-json-before-formatting/","description":"Use this workflow when JSON might be broken. Learn when to validate first, which errors to fix, and when to move into formatting.","author":{"@type":"Organization","name":"Local Code Format"},"publisher":{"@type":"Organization","name":"Local Code Format"},"datePublished":"2026-03-08","dateModified":"2026-03-09"},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://localcodeformat.com/"},{"@type":"ListItem","position":2,"name":"Guides","item":"https://localcodeformat.com/guides/"},{"@type":"ListItem","position":3,"name":"How to Validate JSON Before Formatting","item":"https://localcodeformat.com/guides/how-to-validate-json-before-formatting/"}]},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"When should I validate JSON before formatting?","acceptedAnswer":{"@type":"Answer","text":"Validate first when the payload may be broken, copied from logs, edited manually, or throwing parser errors. Formatting comes after the JSON is structurally valid."}},{"@type":"Question","name":"What kinds of JSON errors should I expect?","acceptedAnswer":{"@type":"Answer","text":"Common JSON errors include missing commas, unquoted keys, bad quotation marks, trailing commas, unmatched braces, and extra characters after the payload."}},{"@type":"Question","name":"What do I do after the validator passes?","acceptedAnswer":{"@type":"Answer","text":"Once the JSON validates cleanly, open the JSON Formatter to pretty-print or minify the payload for easier reading or sharing."}}]}]
+  </script>
+</head>
+<body>
+  <header class="site-header"><div class="container site-header-inner"><a class="site-logo" href="/"><span class="site-logo-mark">{ }</span> Local Code Format</a><button class="menu-toggle" data-menu-toggle aria-label="Toggle menu">Menu</button><nav class="site-nav" data-menu><a href="/json-tools/">JSON Tools</a><a href="/formatters/">Formatters</a><a href="/validators/">Validators</a><a href="/guides/">Guides</a><a href="/about/">About</a></nav></div></header>
+  <section class="page-hero"><div class="container"><div class="breadcrumbs"><a href="/">Home</a><span>/</span><a href="/guides/">Guides</a><span>/</span><span>How to Validate JSON Before Formatting</span></div><h1>How to validate JSON before formatting</h1><p>When a payload is broken, formatting will not solve the real problem. Validation comes first, then formatting once the JSON is clean.</p><div class="byline">Updated March 9, 2026 · JSON validation workflow</div></div></section>
+  <main class="section"><div class="container stack">
+    <article class="card tool-card">
+      <h2>Start with correctness, not readability</h2>
+      <p class="muted">If the JSON is invalid, pretty formatting is a distraction. A parser error usually means the real job is to find the missing comma, bad quote, extra character, or unmatched brace before you think about readability.</p>
+    </article>
+    <article class="card tool-card">
+      <h2>When you should validate first</h2>
+      <table class="data-table">
+        <thead><tr><th>Situation</th><th>Why validation should come first</th></tr></thead>
+        <tbody>
+          <tr><td>You copied JSON from logs or a terminal</td><td>Log output often contains truncated text, escaped characters, or extra wrapper text that makes the payload invalid.</td></tr>
+          <tr><td>You edited the payload manually</td><td>Manual edits often introduce missing commas, mismatched quotes, or trailing commas.</td></tr>
+          <tr><td>An API request or parser is failing</td><td>The failure may be plain syntax, not business logic. Validation helps you rule that out fast.</td></tr>
+          <tr><td>You are not sure whether the JSON is complete</td><td>Validation tells you whether you can trust the structure before you spend time formatting it.</td></tr>
+        </tbody>
+      </table>
+    </article>
+    <article class="card tool-card">
+      <h2>Recommended sequence</h2>
+      <ol class="plain-list muted">
+        <li>Paste the payload into the <a href="/json-validator/">JSON Validator</a>.</li>
+        <li>Fix the syntax issue the validator surfaces: commas, quotes, brackets, braces, or stray characters.</li>
+        <li>Re-run the validator until the payload parses cleanly.</li>
+        <li>Then open the <a href="/json-formatter/">JSON Formatter</a> to pretty-print or minify the now-valid JSON.</li>
+      </ol>
+    </article>
+    <div class="grid grid-2">
+      <article class="card tool-card">
+        <h2>Common JSON errors to check first</h2>
+        <ul class="check-list muted">
+          <li>Missing commas between keys or array items</li>
+          <li>Single quotes where JSON requires double quotes</li>
+          <li>Unmatched braces or brackets</li>
+          <li>Trailing commas at the end of objects or arrays</li>
+          <li>Extra text before or after the actual payload</li>
+        </ul>
+      </article>
+      <article class="card tool-card">
+        <h2>What to do after validation passes</h2>
+        <ul class="plain-list muted">
+          <li><a href="/json-formatter/">Format the JSON</a> to inspect nested objects, arrays, and field names more easily.</li>
+          <li><a href="/guides/how-to-format-json-safely/">Read the safety guide</a> if the payload contains secrets or customer data.</li>
+          <li><a href="/guides/json-formatter-vs-validator/">Read the comparison guide</a> if your team keeps mixing these jobs up.</li>
+        </ul>
+      </article>
+    </div>
+    <article class="card tool-card">
+      <h2>Why this guide exists</h2>
+      <p class="muted">People often search for <span class="inline-code">json formatter</span> when what they really need is a validator. This page makes the split explicit: validation is about correctness, formatting is about readability, and most broken-payload workflows need both in that order.</p>
+    </article>
+    <section class="card tool-card"><h2>FAQ</h2>
+      <div class="faq-item"><button class="faq-question">When should I validate JSON before formatting?<span class="faq-icon">▾</span></button><div class="faq-answer"><p class="muted">Validate first when the payload may be broken, copied from logs, edited manually, or already throwing parser errors. Formatting comes after the JSON is structurally valid.</p></div></div>
+      <div class="faq-item"><button class="faq-question">What kinds of JSON errors should I expect?<span class="faq-icon">▾</span></button><div class="faq-answer"><p class="muted">The most common errors are missing commas, unquoted keys, bad quotation marks, trailing commas, unmatched braces, and extra characters after the payload.</p></div></div>
+      <div class="faq-item"><button class="faq-question">What do I do after the validator passes?<span class="faq-icon">▾</span></button><div class="faq-answer"><p class="muted">Once the JSON validates cleanly, open the <a href="/json-formatter/">JSON Formatter</a> to make it easier to read, debug, or share in a redacted form.</p></div></div>
+    </section>
+  </div></main>
+  <footer class="footer"><div class="container footer-grid"><div><h4>Local Code Format</h4><p>Browser-based JSON, SQL, HTML, and diff tools that help you clean up code without uploading it elsewhere.</p></div><div><h4>Core Tools</h4><a href="/json-formatter/">JSON Formatter</a><a href="/json-validator/">JSON Validator</a><a href="/sql-formatter/">SQL Formatter</a><a href="/html-formatter/">HTML Formatter</a></div><div><h4>Learn</h4><a href="/guides/">Guides</a><a href="/guides/how-to-format-json-safely/">How to Format JSON Safely</a><a href="/guides/json-formatter-vs-validator/">JSON Formatter vs Validator</a></div><div><h4>Trust</h4><a href="/about/">About</a><a href="/privacy-policy/">Privacy Policy</a><a href="/terms/">Terms</a></div></div></footer>
+  <script src="/assets/js/analytics.js"></script>
+  <script src="/assets/js/site.js"></script>
+</body>
+</html>

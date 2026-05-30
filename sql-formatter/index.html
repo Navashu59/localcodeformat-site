@@ -4,17 +4,27 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SQL Formatter — Format SQL Queries Locally</title>
-  <meta name="description" content="Format SQL queries locally in your browser for easier reviews, debugging, and cleanup.">
+  <meta name="description" content="Format SQL queries locally in your browser—no data leaves your machine. Beautify and indent SQL for easier debugging, code reviews, and secure query cleanup.">
   <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta property="og:title" content="SQL Formatter — Format SQL Queries Locally">
+  <meta property="og:description" content="Format SQL queries locally in your browser—no data leaves your machine. Beautify and indent SQL for easier debugging, code reviews, and secure query cleanup.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://localcodeformat.com/sql-formatter/">
+  <meta property="og:image" content="https://localcodeformat.com/assets/images/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <link rel="canonical" href="https://localcodeformat.com/sql-formatter/">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="stylesheet" href="/assets/css/style.css">
+  <script type="application/ld+json">
+  [{"@context":"https://schema.org","@type":"SoftwareApplication","name":"SQL Formatter","url":"https://localcodeformat.com/sql-formatter/","description":"Format SQL queries locally in your browser—no data leaves your machine. Beautify and indent SQL for easier debugging, code reviews, and secure query cleanup.","applicationCategory":"DeveloperApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://localcodeformat.com/"},{"@type":"ListItem","position":2,"name":"Formatters","item":"https://localcodeformat.com/formatters/"},{"@type":"ListItem","position":3,"name":"SQL Formatter","item":"https://localcodeformat.com/sql-formatter/"}]},{"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"Does this SQL formatter upload my queries?","acceptedAnswer":{"@type":"Answer","text":"No. The SQL formatter runs entirely in your browser, so your queries never leave your machine. This is ideal for sensitive production queries or customer data."}},{"@type":"Question","name":"What SQL dialects does it support?","acceptedAnswer":{"@type":"Answer","text":"The formatter handles standard SQL syntax (SELECT, FROM, WHERE, JOIN, etc.) and common extensions. For complex vendor-specific syntax, results may vary, but basic formatting works across most dialects."}},{"@type":"Question","name":"Can I format large SQL files?","acceptedAnswer":{"@type":"Answer","text":"Yes, but very large queries (10,000+ lines) may slow down browser performance. For massive files, consider splitting them into smaller chunks or using a desktop SQL formatter."}}]}]
+  </script>
 </head>
 <body data-tool="sql-formatter">
   <header class="site-header"><div class="container site-header-inner"><a class="site-logo" href="/"><span class="site-logo-mark">{ }</span> Local Code Format</a><button class="menu-toggle" data-menu-toggle aria-label="Toggle menu">Menu</button><nav class="site-nav" data-menu><a href="/json-tools/">JSON Tools</a><a href="/formatters/">Formatters</a><a href="/validators/">Validators</a><a href="/guides/">Guides</a><a href="/about/">About</a></nav></div></header>
-  <section class="page-hero"><div class="container"><div class="breadcrumbs"><a href="/">Home</a><span>/</span><a href="/formatters/">Formatters</a><span>/</span><span>SQL Formatter</span></div><h1>SQL Formatter</h1><p>Make large SQL queries readable without pasting them into a formatter you do not trust. Good for review, debugging, incident response, and documentation prep.</p><div class="byline">Updated March 8, 2026 · Local browser formatting</div></div></section>
+  <section class="page-hero"><div class="container"><div class="breadcrumbs"><a href="/">Home</a><span>/</span><a href="/formatters/">Formatters</a><span>/</span><span>SQL Formatter</span></div><h1>SQL Formatter</h1><p>Make large SQL queries readable without pasting them into a formatter you do not trust. Good for review, debugging, incident response, and documentation prep.</p><div class="privacy-note">All formatting happens locally; no SQL data leaves your browser.</div><div class="byline">Updated March 8, 2026 · Local browser formatting</div></div></section>
   <main class="section"><div class="container tool-layout">
     <article class="card tool-shell">
       <div class="field-group"><label for="sql-input">SQL query</label><textarea id="sql-input" placeholder="select id,name,email from users where status = 'active' order by created_at desc"></textarea></div>
@@ -34,8 +44,21 @@
       <h2>Format first, then share</h2>
       <p class="muted">If your SQL contains customer data, internal table names, or business logic, format it locally first and redact anything sensitive before pasting it into docs or tickets. See <a href="/guides/how-to-format-sql-queries-safely/">how to format SQL queries safely</a> for the full workflow.</p>
     </article>
+    <article class="card tool-card">
+      <h2>What to do after formatting SQL</h2>
+      <ul class="plain-list muted">
+        <li><a href="/sql-tools/">Visit the SQL tools hub</a></li>
+        <li><a href="/guides/how-to-compare-text-changes-locally/">Compare query revisions locally</a></li>
+        <li><a href="/diff-checker/">Use the diff checker for before/after query reviews</a></li>
+      </ul>
+    </article>
+    <section class="card tool-card"><h2>FAQ</h2>
+      <div class="faq-item"><button class="faq-question">Does this SQL formatter upload my queries?<span class="faq-icon">▾</span></button><div class="faq-answer"><p class="muted">No. The SQL formatter runs entirely in your browser, so your queries never leave your machine. This is ideal for sensitive production queries or customer data.</p></div></div>
+      <div class="faq-item"><button class="faq-question">What SQL dialects does it support?<span class="faq-icon">▾</span></button><div class="faq-answer"><p class="muted">The formatter handles standard SQL syntax (SELECT, FROM, WHERE, JOIN, etc.) and common extensions. For complex vendor-specific syntax, results may vary, but basic formatting works across most dialects.</p></div></div>
+      <div class="faq-item"><button class="faq-question">Can I format large SQL files?<span class="faq-icon">▾</span></button><div class="faq-answer"><p class="muted">Yes, but very large queries (10,000+ lines) may slow down browser performance. For massive files, consider splitting them into smaller chunks or using a desktop SQL formatter.</p></div></div>
+    </section>
   </div></main>
-  <footer class="footer"><div class="container footer-grid"><div><h4>Local Code Format</h4><p>Browser-based code formatting and validation tools built around trust, clarity, and repeat-use developer workflows.</p></div><div><h4>Core Tools</h4><a href="/json-formatter/">JSON Formatter</a><a href="/json-validator/">JSON Validator</a><a href="/sql-formatter/">SQL Formatter</a><a href="/html-formatter/">HTML Formatter</a></div><div><h4>Learn</h4><a href="/guides/">Guides</a><a href="/guides/how-to-format-json-safely/">How to Format JSON Safely</a><a href="/guides/how-to-format-sql-queries-safely/">How to Format SQL Queries Safely</a><a href="/guides/json-formatter-vs-validator/">JSON Formatter vs Validator</a></div><div><h4>Trust</h4><a href="/about/">About</a><a href="/privacy-policy/">Privacy Policy</a><a href="/terms/">Terms</a></div></div></footer>
+  <footer class="footer"><div class="container footer-grid"><div><h4>Local Code Format</h4><p>Browser-based JSON, SQL, HTML, and diff tools that help you clean up code without uploading it elsewhere.</p></div><div><h4>Core Tools</h4><a href="/json-formatter/">JSON Formatter</a><a href="/json-validator/">JSON Validator</a><a href="/sql-formatter/">SQL Formatter</a><a href="/html-formatter/">HTML Formatter</a></div><div><h4>Learn</h4><a href="/guides/">Guides</a><a href="/guides/how-to-format-json-safely/">How to Format JSON Safely</a><a href="/guides/how-to-format-sql-queries-safely/">How to Format SQL Queries Safely</a><a href="/guides/json-formatter-vs-validator/">JSON Formatter vs Validator</a></div><div><h4>Trust</h4><a href="/about/">About</a><a href="/privacy-policy/">Privacy Policy</a><a href="/terms/">Terms</a></div></div></footer>
   <script src="/assets/js/analytics.js"></script>
   <script src="/assets/js/site.js"></script>
   <script src="/assets/js/tools.js"></script>

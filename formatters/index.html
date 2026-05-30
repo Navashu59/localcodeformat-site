@@ -3,24 +3,40 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Formatter Tools — JSON, SQL, HTML</title>
-  <meta name="description" content="Browse formatter tools for JSON, SQL, and HTML. Built for local browser-side cleanup workflows.">
+  <title>Formatter Tools — Clean Up JSON, SQL, and HTML Locally</title>
+  <meta name="description" content="Open the right formatter fast. Clean up JSON, SQL, and HTML in your browser without uploads or server-side processing.">
   <meta name="robots" content="index, follow, max-image-preview:large">
+  <meta property="og:title" content="Formatter Tools — Local Code Format">
+  <meta property="og:description" content="Open the right formatter fast. Clean up JSON, SQL, and HTML in your browser without uploads or server-side processing.">
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://localcodeformat.com/formatters/">
+  <meta property="og:image" content="https://localcodeformat.com/assets/images/og-image.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
   <link rel="canonical" href="https://localcodeformat.com/formatters/">
   <link rel="icon" href="/favicon.svg" type="image/svg+xml">
   <link rel="icon" href="/favicon.ico" sizes="any">
   <link rel="apple-touch-icon" href="/apple-touch-icon.png">
   <link rel="stylesheet" href="/assets/css/style.css">
+  <script type="application/ld+json">
+  [{"@context":"https://schema.org","@type":"CollectionPage","name":"Formatter Tools","url":"https://localcodeformat.com/formatters/","description":"Formatter tools for JSON, SQL, and HTML with related support guides.","mainEntity":{"@type":"ItemList","itemListElement":[{"@type":"ListItem","position":1,"url":"https://localcodeformat.com/json-formatter/"},{"@type":"ListItem","position":2,"url":"https://localcodeformat.com/sql-formatter/"},{"@type":"ListItem","position":3,"url":"https://localcodeformat.com/html-formatter/"}]}},{"@context":"https://schema.org","@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"Home","item":"https://localcodeformat.com/"},{"@type":"ListItem","position":2,"name":"Formatters","item":"https://localcodeformat.com/formatters/"}]}]
+  </script>
 </head>
 <body>
   <header class="site-header"><div class="container site-header-inner"><a class="site-logo" href="/"><span class="site-logo-mark">{ }</span> Local Code Format</a><button class="menu-toggle" data-menu-toggle aria-label="Toggle menu">Menu</button><nav class="site-nav" data-menu><a href="/json-tools/">JSON Tools</a><a href="/formatters/">Formatters</a><a href="/validators/">Validators</a><a href="/guides/">Guides</a><a href="/about/">About</a></nav></div></header>
-  <section class="page-hero"><div class="container"><div class="breadcrumbs"><a href="/">Home</a><span>/</span><span>Formatters</span></div><h1>Formatter tools for structured text and code</h1><p>Use these tools when the job is readability, cleanup, or prep for debugging. Validation is a different job, so the formatter hub links to those tools without mixing the intent.</p></div></section>
-  <main class="section"><div class="container grid grid-3">
-    <article class="card tool-card"><h2><a href="/json-formatter/">JSON Formatter</a></h2><p class="muted">Pretty-print or minify JSON without shipping it to a remote processor.</p></article>
-    <article class="card tool-card"><h2><a href="/sql-formatter/">SQL Formatter</a></h2><p class="muted">Reflow long SQL statements into something you can read, review, and debug.</p></article>
-    <article class="card tool-card"><h2><a href="/html-formatter/">HTML Formatter</a></h2><p class="muted">Untangle messy markup and expose nesting issues with cleaner indentation.</p></article>
+  <section class="page-hero"><div class="container"><div class="breadcrumbs"><a href="/">Home</a><span>/</span><span>Formatters</span></div><h1>Formatter tools for JSON, SQL, and HTML</h1><p>Use this page when your code or markup is already close enough to be valid and the next job is readability. Open the formatter that matches what you pasted, clean it up, and copy the result back into your editor or ticket.</p></div></section>
+  <main class="section"><div class="container stack">
+    <div class="grid grid-3">
+      <article class="card tool-card"><h2><a href="/json-formatter/">JSON Formatter</a></h2><p class="muted">Pretty-print or minify JSON without shipping it to a remote processor.</p><div class="card-links"><a class="card-cta" href="/json-formatter/">Open tool</a><a href="/json-tools/">JSON hub</a></div></article>
+      <article class="card tool-card"><h2><a href="/sql-formatter/">SQL Formatter</a></h2><p class="muted">Reflow long SQL statements into something you can read, review, and debug.</p><div class="card-links"><a class="card-cta" href="/sql-formatter/">Open tool</a><a href="/sql-tools/">SQL hub</a></div></article>
+      <article class="card tool-card"><h2><a href="/html-formatter/">HTML Formatter</a></h2><p class="muted">Untangle messy markup and expose nesting issues with cleaner indentation.</p><div class="card-links"><a class="card-cta" href="/html-formatter/">Open tool</a><a href="/guides/how-to-format-html-without-breaking-markup/">HTML guide</a></div></article>
+    </div>
+    <div class="grid grid-2">
+      <article class="card tool-card"><h2>Use a formatter when the text is valid but hard to read</h2><ul class="plain-list muted"><li><strong>JSON:</strong> clean response bodies, config files, and request payloads before sharing them.</li><li><strong>SQL:</strong> reflow long queries before code review, debugging, or ticket handoff.</li><li><strong>HTML:</strong> inspect nesting and indentation before you touch tags manually.</li></ul></article>
+      <article class="card tool-card"><h2>If your problem is not formatting</h2><ul class="plain-list muted"><li><a href="/validators/">Open a validator</a> if the input may be broken.</li><li><a href="/diff-checker/">Open Diff Checker</a> if you need to compare two versions line by line.</li><li><a href="/guides/how-to-compare-text-changes-locally/">Read the comparison guide</a> if you are reviewing changes, not cleaning formatting.</li></ul></article>
+    </div>
   </div></main>
-  <footer class="footer"><div class="container footer-grid"><div><h4>Local Code Format</h4><p>Browser-based code formatting and validation tools built around trust, clarity, and repeat-use developer workflows.</p></div><div><h4>Core Tools</h4><a href="/json-formatter/">JSON Formatter</a><a href="/json-validator/">JSON Validator</a><a href="/sql-formatter/">SQL Formatter</a><a href="/html-formatter/">HTML Formatter</a></div><div><h4>Learn</h4><a href="/guides/">Guides</a><a href="/guides/how-to-format-json-safely/">How to Format JSON Safely</a><a href="/guides/json-formatter-vs-validator/">JSON Formatter vs Validator</a></div><div><h4>Trust</h4><a href="/about/">About</a><a href="/privacy-policy/">Privacy Policy</a><a href="/terms/">Terms</a></div></div></footer>
+  <footer class="footer"><div class="container footer-grid"><div><h4>Local Code Format</h4><p>Browser-based JSON, SQL, HTML, and diff tools that help you clean up code without uploading it elsewhere.</p></div><div><h4>Core Tools</h4><a href="/json-formatter/">JSON Formatter</a><a href="/json-validator/">JSON Validator</a><a href="/sql-formatter/">SQL Formatter</a><a href="/html-formatter/">HTML Formatter</a></div><div><h4>Learn</h4><a href="/guides/">Guides</a><a href="/guides/how-to-format-json-safely/">How to Format JSON Safely</a><a href="/guides/json-formatter-vs-validator/">JSON Formatter vs Validator</a></div><div><h4>Trust</h4><a href="/about/">About</a><a href="/privacy-policy/">Privacy Policy</a><a href="/terms/">Terms</a></div></div></footer>
   <script src="/assets/js/analytics.js"></script>
   <script src="/assets/js/site.js"></script>
 </body>

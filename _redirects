@@ -1,0 +1,18 @@
+# Basic redirects for localcodeformat.com
+/about/          /about/index.html
+/privacy-policy/ /privacy-policy/index.html
+/terms/          /terms/index.html
+/guides/         /guides/index.html
+
+# Tool redirects
+/json-formatter/      /json-formatter/index.html
+/html-formatter/      /html-formatter/index.html
+/sql-formatter/       /sql-formatter/index.html
+/json-tools/          /json-tools/index.html
+/sql-tools/           /sql-tools/index.html
+/validators/          /validators/index.html
+/formatters/          /formatters/index.html
+/diff-checker/        /diff-checker/index.html
+
+# Fallback for missing pages
+/* /404.html 404
