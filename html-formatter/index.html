@@ -24,7 +24,7 @@
 </head>
 <body data-tool="html-formatter">
   <header class="site-header"><div class="container site-header-inner"><a class="site-logo" href="/"><span class="site-logo-mark">{ }</span> Local Code Format</a><button class="menu-toggle" data-menu-toggle aria-label="Toggle menu">Menu</button><nav class="site-nav" data-menu><a href="/json-tools/">JSON Tools</a><a href="/formatters/">Formatters</a><a href="/validators/">Validators</a><a href="/guides/">Guides</a><a href="/about/">About</a></nav></div></header>
-  <section class="page-hero"><div class="container"><div class="breadcrumbs"><a href="/">Home</a><span>/</span><a href="/formatters/">Formatters</a><span>/</span><span>HTML Formatter</span></div><h1>HTML Formatter</h1><p>Format HTML locally so you can inspect tag structure and cleanup markup without sending it to a remote service.</p><div class="byline">Updated March 7, 2026 · Local browser formatting</div></div></section>
+  <section class="page-hero"><div class="container"><div class="breadcrumbs"><a href="/">Home</a><span>/</span><a href="/formatters/">Formatters</a><span>/</span><span>HTML Formatter</span></div><h1>HTML Formatter</h1><p>Format HTML locally so you can inspect tag structure and cleanup markup without sending it to a remote service.</p><div class="byline">Updated June 16, 2026 · Local browser formatting</div></div></section>
   <main class="section"><div class="container stack">
     <div class="tool-layout">
       <article class="card tool-shell">
@@ -43,6 +43,37 @@
       <article class="card tool-card"><h2>Support content for HTML cleanup</h2><ul class="plain-list muted"><li><a href="/guides/how-to-format-html-without-breaking-markup/">How to Format HTML Without Breaking Markup</a></li><li><a href="/diff-checker/">Diff checker for before/after markup</a></li></ul></article>
       <article class="card tool-card"><h2>Where this tool fits</h2><p class="muted">HTML formatter intent is usually not tutorial-first. Users already have pasted markup and want a faster way to inspect nesting and spacing, then compare revisions or copy clean output.</p></article>
     </div>
+    <article class="card tool-card">
+      <h2>Beautify HTML when the markup is messy but usable</h2>
+      <p class="muted">Use this formatter when you copied minified HTML, email markup, CMS blocks, page-source snippets, or template fragments and need indentation before review. It is best for making nested tags readable, not for proving the markup is valid.</p>
+      <table class="data-table">
+        <thead><tr><th>Input problem</th><th>Best next step</th></tr></thead>
+        <tbody>
+          <tr><td>One-line or minified HTML</td><td>Format it here, then scan the nesting level by level.</td></tr>
+          <tr><td>Markup changed after an edit</td><td>Format both versions, then compare them in the <a href="/diff-checker/">Diff Checker</a>.</td></tr>
+          <tr><td>Possible broken tags or missing closers</td><td>Use this page for readability, then validate in your browser or HTML validator before shipping.</td></tr>
+          <tr><td>Private template or customer-specific snippet</td><td>Keep the formatting local and remove sensitive values before sharing output.</td></tr>
+        </tbody>
+      </table>
+    </article>
+    <article class="card tool-card">
+      <h2>What an HTML formatter can and cannot fix</h2>
+      <ul class="check-list muted">
+        <li>It can make indentation, nested sections, repeated wrappers, and copied page-source blocks easier to inspect.</li>
+        <li>It can help you see whether a change touched structure, text, attributes, or only whitespace.</li>
+        <li>It cannot guarantee that invalid HTML becomes valid, because formatting is not the same as validation.</li>
+        <li>It cannot know whether a tag is correct for your framework, CMS, email client, or build system.</li>
+      </ul>
+    </article>
+    <article class="card tool-card">
+      <h2>How to format HTML without changing what matters</h2>
+      <ol class="plain-list muted">
+        <li>Paste the exact snippet you want to inspect, not an entire log or unrelated page dump.</li>
+        <li>Format the HTML and look first at opening and closing tags, then attributes, then text content.</li>
+        <li>If the snippet includes inline CSS or JavaScript, review those blocks separately before copying output into production.</li>
+        <li>When the formatted result looks different from what you expected, compare before and after locally instead of assuming the formatter fixed the issue.</li>
+      </ol>
+    </article>
     <section class="card tool-card"><h2>FAQ</h2>
       <div class="faq-item"><button class="faq-question">Does the HTML formatter upload my markup?<span class="faq-icon">▾</span></button><div class="faq-answer"><p class="muted">No. All HTML formatting happens locally in your browser, so your markup never leaves your machine. This is ideal for sensitive code or proprietary templates.</p></div></div>
       <div class="faq-item"><button class="faq-question">What HTML standards does it support?<span class="faq-icon">▾</span></button><div class="faq-answer"><p class="muted">The formatter handles standard HTML5 markup, including modern semantic elements. It properly indents nested tags and preserves inline formatting like CSS classes and data attributes.</p></div></div>

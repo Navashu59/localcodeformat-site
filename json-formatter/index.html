@@ -24,7 +24,7 @@
 </head>
 <body data-tool="json-formatter">
   <header class="site-header"><div class="container site-header-inner"><a class="site-logo" href="/"><span class="site-logo-mark">{ }</span> Local Code Format</a><button class="menu-toggle" data-menu-toggle aria-label="Toggle menu">Menu</button><nav class="site-nav" data-menu><a href="/json-tools/">JSON Tools</a><a href="/formatters/">Formatters</a><a href="/validators/">Validators</a><a href="/guides/">Guides</a><a href="/about/">About</a></nav></div></header>
-  <section class="page-hero"><div class="container"><div class="breadcrumbs"><a href="/">Home</a><span>/</span><a href="/json-tools/">JSON Tools</a><span>/</span><span>JSON Formatter</span></div><h1>JSON Formatter</h1><p>Use this page when the JSON is mostly valid and your next job is readability. Paste the payload, format it locally, copy the clean output, and move on without sending it to a remote formatter.</p><div class="byline">Updated March 9, 2026 · Local browser processing · No account required</div></div></section>
+  <section class="page-hero"><div class="container"><div class="breadcrumbs"><a href="/">Home</a><span>/</span><a href="/json-tools/">JSON Tools</a><span>/</span><span>JSON Formatter</span></div><h1>JSON Formatter</h1><p>Use this page when the JSON is mostly valid and your next job is readability. Paste the payload, format it locally, copy the clean output, and move on without sending it to a remote formatter.</p><div class="byline">Updated June 16, 2026 · Local browser processing · No account required</div></div></section>
   <main class="section"><div class="container stack">
     <div class="tool-layout">
       <article class="card tool-shell">
@@ -59,6 +59,31 @@
       </table>
     </article>
     <article class="card tool-card"><h2>Quick workflow</h2><ol class="plain-list muted"><li>Paste the JSON exactly as you have it now.</li><li>Format it to inspect the structure and spot obvious problems.</li><li>If formatting fails, switch to the <a href="/json-validator/">validator</a> and fix the syntax error first.</li><li>Copy the clean output back into your editor, request body, or documentation.</li></ol></article>
+    <article class="card tool-card">
+      <h2>How to use a local JSON formatter for real payloads</h2>
+      <p class="muted">A local JSON formatter is most useful when the payload is already in front of you: an API response, webhook body, config value, copied log object, or request sample. Format it for readability, inspect it, then decide whether the next step is validation, minification, or redaction.</p>
+      <table class="data-table">
+        <thead><tr><th>Search task</th><th>Use this page for</th><th>Open next if needed</th></tr></thead>
+        <tbody>
+          <tr><td>JSON formatter local</td><td>Pretty-printing a payload in the browser without a remote formatting step.</td><td><a href="/guides/why-local-code-tools-are-safer/">Why local code tools are safer</a></td></tr>
+          <tr><td>JSON formatter example</td><td>Seeing how nested objects, arrays, strings, numbers, booleans, and null values line up after formatting.</td><td><a href="/guides/json-formatting-complete-guide/">JSON formatting guide</a></td></tr>
+          <tr><td>JSON format or minify</td><td>Switching between readable indentation and compact single-line JSON.</td><td><a href="/json-validator/">JSON Validator</a> if parsing fails</td></tr>
+        </tbody>
+      </table>
+    </article>
+    <article class="card tool-card">
+      <h2>What to check before you copy formatted JSON</h2>
+      <ul class="check-list muted">
+        <li>Confirm the payload is valid JSON before pasting it into a config file, API request, or build step.</li>
+        <li>Redact tokens, emails, IDs, customer fields, or production hostnames before sharing the formatted version.</li>
+        <li>Check that arrays and nested objects still represent the same structure after cleanup.</li>
+        <li>Use minify only after review, because compact JSON is harder to audit manually.</li>
+      </ul>
+    </article>
+    <article class="card tool-card">
+      <h2>Why formatting errors usually mean validation comes first</h2>
+      <p class="muted">A formatter cannot safely beautify JSON that cannot be parsed. If formatting fails, common causes include a missing comma, a trailing comma, a bad quote, an unescaped character, or a stray bracket. Move to the <a href="/json-validator/">JSON Validator</a>, fix the syntax issue, then return here to format or minify the cleaned payload.</p>
+    </article>
     <article class="card tool-card">
       <h2>Common mistakes when formatting JSON</h2>
       <ul class="check-list muted">
